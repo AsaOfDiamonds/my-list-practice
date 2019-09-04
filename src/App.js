@@ -33,7 +33,7 @@ class App extends Component {
       <header className="App-header">
         <h1>This is my list</h1>
       </header>
-      <MyList />
+      <MyList list={this.state.list}/>
     </div>
   );
   }
