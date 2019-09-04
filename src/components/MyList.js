@@ -5,7 +5,13 @@ const MyList = props => {
   return(
     <div className='my-list'>
     <h1>This is my List Component</h1>
-      <My />
+    {props.list.map(item => (
+      <My 
+        key={item.id}
+        item={item}
+      />
+
+    ))}
     </div>
   );
 }
