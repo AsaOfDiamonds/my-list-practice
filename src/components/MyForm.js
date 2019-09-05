@@ -14,7 +14,8 @@ class MyForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.setState({ item: '' })
+    this.setState({ item: '' });
+    this.props.addItem(event, this.state.item)
   }
 
   render() {
@@ -28,6 +29,7 @@ class MyForm extends React.Component {
             value={this.state.item}
             onChange={this.handleChanges}
           />
+          <button>Add Item</button>
         </form>
       </div>
     );
