@@ -5,7 +5,14 @@ class MyForm extends React.Component {
     super();
     this.state = {
       item: ''
-    }
+    };
+  }
+  render() {
+    return(
+      <div className= 'my-form'>
+        <h1>This is the form</h1>
+      </div>
+    );
   }
 }
 

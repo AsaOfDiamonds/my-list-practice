@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MyList from "./components/MyList";
+import MyForm from "./components/MyForm";
 import './App.css';
 
 class App extends Component {
@@ -34,6 +35,7 @@ class App extends Component {
         <h1>This is my list</h1>
       </header>
       <MyList list={this.state.list}/>
+      <MyForm />
     </div>
   );
   }
