@@ -27,6 +27,19 @@ class App extends Component {
 
     }
   }
+
+  addItem = (event, item) => {
+    event.preventDefault();
+    const newItem = {
+      name: item,
+      id: Date.now(),
+      completed: false
+    };
+    this.setState({
+      list: [...this.state.list, newItem]
+    });
+  }
+
   render() {
     console.log(this.state);
   return (
@@ -35,7 +48,7 @@ class App extends Component {
         <h1>This is my list</h1>
       </header>
       <MyList list={this.state.list}/>
-      <MyForm />
+      <MyForm addItem={this.addItem}/>
     </div>
   );
   }

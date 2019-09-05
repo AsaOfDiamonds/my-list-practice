@@ -12,11 +12,16 @@ class MyForm extends React.Component {
     this.setState({ [event.target.name]: event.target.value })
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    this.setState({ item: '' })
+  }
+
   render() {
     return(
       <div className= 'my-form'>
         <h1>This is the form</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input 
             type='text'
             name= 'item'
